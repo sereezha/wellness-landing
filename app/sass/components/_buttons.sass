@@ -1,0 +1,27 @@
+.btn
+   display: inline-block
+   height: 64px
+   line-height: 64px
+   // text-align: center
+   font-family: $default-font
+   font-size: 14px
+   font-weight: 500
+   text-transform: uppercase
+   letter-spacing: 0.28px
+   cursor: pointer
+   text-decoration: none
+   background: none
+   outline: none
+   &--fill
+      color: #3d3c3c
+      background-color: #fff
+      padding: 0 45px
+   &--transparent
+      color: #fff
+      height: 64px
+      border: 2px solid #fff
+      transition: background-color 0.3s, color 0.3s
+      &:hover,
+      &:focus
+         background-color: #ffffff
+         color: #3d3c3c

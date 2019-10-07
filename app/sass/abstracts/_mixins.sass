@@ -1,0 +1,126 @@
+// font-family 
+
+=font($alias, $name, $weight)
+   @font-face    
+      font-family: $alias
+      src: url("../fonts" + "/" + $name + "/" + $name +  ".eot") format("eot")
+      src: url("../fonts" + "/" + $name + "/" + $name +  ".eot?iefix") format("eot"), url("../fonts/" + "/" + $name + "/" + $name +  ".woff") format("woff"), url("../fonts/" + "/" + $name + "/" + $name +  ".ttf") format('truetype')
+      font-weight: $weight
+      font-style: normal
+      
+// end font-family
+
+
+// =psc($axis, $width: none, $height: none)
+//    position: absolute
+//    @if $axis == both
+//       top: 50%
+//       left: 50%
+//    @if $width != none and $height != none
+//       width: $width + px
+//       height: $height + px
+//       margin-left: -($width/2) + px
+//       margin-top: -($height/2) + px
+//    @else
+//       transform: translate(-50%, -50%)
+//    @else if $axis == h
+//       left: 50%
+//    @if $width != none
+//       width: $width + px
+//       height: $height + px
+//       margin-left: -($width/2) + px
+//    @else
+//       transform: translateX(-50%)
+//    @else if $axis == v
+//       top: 50%
+//    @if $width != none and $height != none
+//       width: $width + px
+//       height: $height + px
+//       margin-top: -($height/2) + px
+//    @else
+//       transform: translateY(-50%)
+
+=visually-hidden    
+   position: absolute !important
+   clip: rect(1px 1px 1px 1px)
+   clip: rect(1px, 1px, 1px, 1px) // IE6, IE7
+   padding:0 !important
+   border:0 !important
+   height: 1px !important
+   width: 1px !important
+   overflow: hidden
+
+=margin-h-center 
+   margin-left: auto
+   margin-right: auto
+   
+// for flex
+=margin-v-center
+   margin-top: auto
+   margin-bottom: auto
+
+=margin-center
+   margin: auto
+
+=flex-center 
+   display: flex
+   justify-content: center
+   align-items: center
+
+// end for flex
+
+=pseudo($pos: absolute, $content: '') 
+   content: $content
+   position: $pos
+
+=truncateText($overflow: ellipsis)
+   overflow: hidden
+   white-space: nowrap
+   text-overflow: $overflow // values are: clip, ellipsis, or a string
+
+=opacity($opacity)
+   opacity: $opacity
+   $opacity-ie: $opacity * 100
+   filter: alpha(opacity = $opacity-ie) //IE8
+
+=aspect-ratio($width, $height) 
+   position: relative
+   &:before 
+      display: block
+      content: ""
+      width: 100%
+      padding-top: ($height / $width) * 100%
+   > .content 
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+  
+=css-triangle($color, $direction, $size: 6px, $position: absolute)
+   +pseudo($pos: $position)
+      width: 0
+      height: 0
+   @if $direction == down 
+      border-left: $size solid transparent
+      border-right: $size solid transparent
+      border-top: $size solid $color
+      margin-top: 0 - round( $size / 2.5 )
+   @else if $direction == up 
+      border-left: $size solid transparent
+      border-right: $size solid transparent
+      border-bottom: $size solid $color
+      margin-bottom: 0 - round( $size / 2.5 )
+   @else if $direction == right 
+      border-top: $size solid transparent
+      border-bottom: $size solid transparent
+      border-left: $size solid $color
+      margin-right: -$size
+   @else if  $direction == left 
+      border-top: $size solid transparent
+      border-bottom: $size solid transparent
+      border-right: $size solid $color
+      margin-left: -$size
+
+
+  

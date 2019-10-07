@@ -1,0 +1,62 @@
+// abstracts
+@import "abstracts/vars"
+@import "abstracts/mixins"
+@import "abstracts/normalize"
++normalize
+
+
+body
+   font-size: 16px
+   min-width: 320px
+   position: relative
+   line-height: 1.2
+   font-family: $default-font
+   font-weight: 400
+   color: $text
+   &.no-scroll
+      overflow: hidden
+
+input, textarea
+   border: #666 1px solid
+   outline: none
+   &:focus:required:invalid
+      border-color: red
+   &:required:valid
+      border-color: green
+
+b, strong
+	font-weight: bold
+
+a
+   text-decoration: none
+
+.text-center
+	text-align: center
+
+.container
+   max-width: 1200px
+   padding: 0 30px
+   margin: 0 auto
+
+.blue-link
+   color: #448ccb
+   font-size: 14px
+   font-weight: 600
+   letter-spacing: 0.7px
+
+.semi-bold
+   font-weight: 600
+
+// components
+@import "components/buttons"
+@import "components/back-bg"
+
+// pages
+@import "pages/header"
+@import "pages/hero"
+@import "pages/info"
+@import "pages/classes"
+@import "pages/cta"
+@import "pages/instructors"
+@import "pages/testimonials"
+@import "pages/footer"

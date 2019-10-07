@@ -1,0 +1,129 @@
+.classes-block 
+   padding: 70px 0 95px
+
+   &__wrap 
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      @media screen and (max-width: 1130px)
+         flex-direction: column
+
+   &__intro 
+      position: relative
+      top: 20px
+      width: 15%
+      margin-right: 60px
+      @media screen and (max-width: 1130px)
+         top: 0
+         display: flex
+         justify-content: space-between
+         align-items: flex-end
+         width: 100%
+         margin-right: 0
+         margin-bottom: 60px
+      @media screen and (max-width: 450px)
+         flex-direction: column
+         align-items: flex-start
+
+   &__content
+      margin-bottom: 25px
+      @media screen and (max-width: 1130px)
+         margin-bottom: 0
+         margin-right: 40px
+      @media screen and (max-width: 450px)
+         margin-top: 30px
+         margin-right: 0
+         order: 1
+
+   &__title 
+      margin-bottom: 30px
+      color: #252628
+      font-family: $abril
+      font-size: 36px
+      font-weight: 400
+      line-height: 1.33
+      letter-spacing: 1.8px
+
+   &__descr 
+      color: #a1aeb7
+      font-size: 14px
+      line-height: 1.29
+
+   &__pic 
+      @media screen and (max-width: 450px)
+         width: 100%
+
+   &__img 
+      @media screen and (max-width: 450px)
+         margin: 0 auto
+
+.classes 
+   position: relative
+   display: flex
+   flex-wrap: wrap
+   width: 75%
+   @media screen and (max-width: 1130px)
+      width: 100%
+   @media screen and (max-width: 800px)
+      justify-content: center
+      &::before
+         display: none
+
+.class 
+   position: relative
+   width: 33.33333%
+   padding: 120px 55px 70px
+   background-color: #f9f9f8
+   text-align: center
+   &:not(:last-child)
+      border-right: 1px solid #ededed
+   &::before
+      display: none
+   @media screen and (max-width: 1130px)
+      padding-left: 35px
+      padding-right: 35px
+   @media screen and (max-width: 800px)
+      width: calc(50% - 30px)
+      padding-left: 20px
+      padding-right: 20px
+      margin: 0 15px 30px
+      &:not(:last-child)
+         border: none
+      &::before
+         display: block
+   @media screen and (max-width: 600px)
+      width: 100%
+      margin-left: 0
+      margin-right: 0
+            
+
+   &__pic 
+      margin-bottom: 55px
+
+   &__img 
+      min-height: 76px
+      margin: 0 auto
+
+   &__title 
+      white-space: nowrap
+      margin-bottom: 15px
+      color: #252628
+      font-family: $yeseva
+      font-size: 18px
+      font-weight: 400
+      text-transform: uppercase
+      letter-spacing: 0.27px
+      @media screen and (max-width: 800px)
+         white-space: normal
+
+   &__text 
+      margin-bottom: 25px
+      color: #a6a6a6
+      font-size: 14px
+      font-weight: 500
+      line-height: 1.29
+      letter-spacing: 0.7px
+
+   &__paragraph 
+
+   &__link 

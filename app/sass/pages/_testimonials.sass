@@ -1,0 +1,111 @@
+.testimonials 
+   padding: 70px 0 120px
+
+.testimonials__wrapper 
+   display: flex
+   align-items: center
+   @media screen and (max-width: 800px)
+      flex-direction: column
+      align-items: flex-start
+
+
+.testimonials__left 
+   width: 23%
+   @media screen and (max-width: 800px)   
+      width: 50%
+   @media screen and (max-width: 500px)   
+      width: 100% 
+
+.testimonials-intro 
+
+.testimonials-intro__content 
+   margin-bottom: 40px
+
+.testimonials-intro__title 
+   margin-bottom: 30px
+   color: #252628
+   font-family: $yeseva
+   font-size: 36px
+   font-weight: 400
+
+.testimonials-intro__descr 
+   color: #a1aeb7
+   font-size: 14px
+   font-weight: 500
+   line-height: 1.29
+
+.testimonials-intro__pic 
+
+.testimonials-intro__img 
+
+.testimonials__right 
+   margin-top: 80px
+   margin-left: 150px
+   width: 50%
+
+   @media screen and (max-width: 800px)   
+      margin-left: 0
+      align-self: center
+      width: 80%
+   @media screen and (max-width: 500px)   
+      width: 100%
+
+
+.customers 
+   display: flex
+   justify-content: center
+
+.customer 
+   margin-bottom: 55px
+   border-radius: 50%
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+   transition: transform 0.3s
+   outline: none
+   &:not(:last-child)
+      margin-right: 20px
+   &:hover,
+   &:focus
+      transform: scale(1.1)
+
+
+.customer__img 
+
+.customers-testis 
+   position: relative
+   min-height: 130px
+   text-align: center
+
+.customer-testis__testi
+   position: absolute
+   width: 100%
+   top: 0
+   left: 0
+   opacity: 0
+   pointer-events: none
+   transform: translateY(40px)
+   transition: transform 0.3s, opacity 0.3s
+   &.active 
+      opacity: 1
+      transform: translateY(0)
+      transition-delay: 0.3s
+      pointer-events: all
+
+
+.customer-testis__quote 
+   margin-bottom: 25px
+   color: #5b5e5e
+   font-size: 16px
+   font-weight: 400
+   line-height: 1.5
+
+.customer-testis__name
+   color: #252628
+   font-size: 16px
+   font-weight: 500
+
+.customer-testis__job 
+   color: #a1aeb7
+   font-weight: 400 
+   font-size: 14px
+
+

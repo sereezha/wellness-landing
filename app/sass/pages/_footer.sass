@@ -1,0 +1,109 @@
+.footer 
+   position: relative
+   display: flex
+   align-items: flex-end
+   @media screen and (max-width: 850px)
+      flex-direction: column
+      align-items: flex-start
+     
+
+.footer-main 
+   position: relative
+   padding: 150px 0 90px
+   flex-basis: 60%
+   background-color: #262626
+   &::before
+      content: ''
+      position: absolute
+      z-index: -1
+      top: 0
+      left: 0
+      right: -100px
+      bottom: 0
+      height: 100%
+      background-color: #262626
+   @media screen and (max-width: 1200px)
+      &::before
+         right: 0
+         width: 140%
+   @media screen and (max-width: 850px)
+      order: 1
+      width: 100%
+      &::before
+         display: none
+
+.footer-main__logo 
+   margin-bottom: 30px
+
+.logo 
+
+.footer-main__text 
+   max-width: 325px
+   margin-bottom: 40px
+   color: #fff
+   font-size: 14px
+   font-weight: 400
+   line-height: 1.29
+   letter-spacing: 0.28px
+
+.footer-main__descr 
+
+.footer-main-copy 
+   color: #fff
+   font-size: 14px
+   font-weight: 400
+   letter-spacing: 0.28px
+
+.footer-main-copy__text 
+   display: block
+   margin-bottom: 10px
+   font-size: 14px
+
+.footer-main-copy__author 
+
+
+.footer-nav 
+   flex-basis: 40%
+   margin-left: -1px
+   padding: 60px 80px 100px 
+   background-color: #363636
+   @media screen and (max-width: 850px)
+      width: 80%
+      padding-left: 0
+      padding-right: 0
+      margin-left: 0
+      margin-bottom: -1px
+   @media screen and (max-width: 600px)
+      width: 100%
+
+.footer-nav__lists-wrapper 
+   display: flex
+   @media screen and (max-width: 600px)
+      justify-content: center
+
+.footer-nav__list-wrapper 
+   &:not(:last-child)
+      margin-right: 80px
+
+.footer-nav__list-title 
+   margin-bottom: 35px
+   color: #fde3a7
+   font-size: 14px
+   font-weight: 600
+   letter-spacing: 0.28px
+
+.footer-nav__list 
+
+.footer-nav__item 
+   &:not(:last-child)
+      margin-bottom: 10px
+
+.footer-nav__link 
+   white-space: nowrap
+   color: #fff
+   font-size: 14px
+   font-weight: 500
+   letter-spacing: 0.28px
+
+
+
