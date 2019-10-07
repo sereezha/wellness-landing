@@ -5,26 +5,88 @@
    left: 0
    width: 100%
    padding: 60px 0
+   transition: all 0.3s 1.3s
+   &.active
+      background-color: #fde3a7
+      transition-delay: 0s  
+      .header__logo
+         opacity: 0
+   @media screen and (max-width: 650px)
+      padding: 20px 0
 
 .header__wrap 
    display: flex
    align-items: center
    justify-content: space-between
+   @media screen and (max-width: 900px)
+      flex-direction: column
+   @media screen and (max-width: 650px)
+      flex-direction: row
 
 .header__left 
+   @media screen and (max-width: 900px)
+      margin-bottom: 30px
+   @media screen and (max-width: 650px)
+      margin-bottom: 0
 
 .header__logo 
+   transition: opacity 0.3s
 
 .header__right 
 
+.burger-button
+   position: relative
+   display: none
+   border: none
+   background: none
+   padding: 0
+   width: 35px
+   height: 24px
+   &__line,
+   &::before,
+   &::after
+      position: absolute
+      display: block
+      right: 0
+      height: 2px
+      background-color: #fde3a7
+      transition: background-color 0.3s 1.3s
+
+   &::before,
+   &::after
+      content: ""
+   &::before
+      top: 0
+      width: 100%
+
+   &__line
+      top: 50%
+      width: 60%
+      margin-top: -1px
+   &::after
+      width: 35%
+      bottom: 0
+   &.active
+      &::before,
+      .burger-button__line,
+      &::after
+         transition-delay: 0s
+         background-color: #3d3c3c
+
+   @media screen and (max-width: 650px)
+      display: block
+      
+
 .header-nav 
+   @media screen and (max-width: 650px)
+      display: none
 
 .header-nav__list 
    display: flex
 
 .header-nav__item 
    &:not(:last-child)
-   margin-right: 50px
+      margin-right: 50px
 
 .header-nav__link 
    position: relative
@@ -55,5 +117,70 @@
          transform-origin: 0% 50%
          transform: scaleX(1)
          opacity: 1
+
+
+.mobile-nav 
+   display: none
+   position: absolute
+   left: 0
+   right: 0
+   top: 100%
+   margin-top: -2px
+   padding: 30px
+   background-color: #fde3a7
+   transition: all 0.3s 1s ease-out
+   transform-origin: 50% 0%
+   transform: scaleY(0)
+   opacity: 0
+   pointer-events: none
+   &.active
+      opacity: 1
+      transition-delay: 0.3s
+      transform: scaleY(1)
+      pointer-events: all
+      .mobile-nav__link
+         transform: translateX(0)
+         opacity: 1
+         pointer-events: all
+         transition-timing-function: cubic-bezier(.04,.96,.58,1.03)
+
+      .mobile-nav__link--1
+         transition-delay: 1s 
+      .mobile-nav__link--2
+         transition-delay: 0.9s
+      .mobile-nav__link--3
+         transition-delay: 0.8s
+      .mobile-nav__link--4
+         transition-delay: 0.7s
+      .mobile-nav__link--5
+         transition-delay: 0.6s
+
+   @media screen and (max-width: 650px)
+      display: block
+      
+
+.mobile-nav__list 
+
+.mobile-nav__item 
+
+.mobile-nav__link 
+   display: block
+   padding: 15px 0
+   font-size: 30px
+   color: #3d3c3c
+   opacity: 0
+   transform: translateX(-100%)
+   pointer-events: none
+   transition: all 0.3s ease-in
+.mobile-nav__link--1
+   transition-delay: 0.4s 
+.mobile-nav__link--2
+   transition-delay: 0.5s
+.mobile-nav__link--3
+   transition-delay: 0.6s
+.mobile-nav__link--4
+   transition-delay: 0.7s
+.mobile-nav__link--5
+   transition-delay: 0.8s
 
 
