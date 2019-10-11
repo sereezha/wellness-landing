@@ -55,6 +55,24 @@ a
 .semi-bold
    font-weight: 600
 
+.overlay
+   position: fixed
+   z-index: 10000
+   top: 0
+   left: 0
+   width: 100%
+   background-color: $beige
+   height: 100vh
+
+.overlay__text
+   position: absolute
+   top: 50%
+   left: 50%
+   font-weight: 300
+   font-family: $yeseva
+   transform: translate(-50%, -50%)
+   font-size: 60px
+
 // components
 @import "components/buttons"
 @import "components/back-bg"
