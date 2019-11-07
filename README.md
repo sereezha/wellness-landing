@@ -5,7 +5,6 @@
    - JavaScript
 
 ## Tests
-
 ### W3C Validator
 <img src="tests-images/w3c-validator.png" alt="Validator">
 
